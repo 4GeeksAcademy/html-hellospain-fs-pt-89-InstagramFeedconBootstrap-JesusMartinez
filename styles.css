@@ -81,3 +81,8 @@
     text-align: center;
     padding: 10px;
 }
+
+.card-title-large {
+    font-size: 30px; /* Ajusta el tamaño según tus necesidades */
+    font-weight: bold;
+}
