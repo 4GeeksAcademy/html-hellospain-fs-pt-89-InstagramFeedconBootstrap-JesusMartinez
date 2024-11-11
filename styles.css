@@ -1,0 +1,51 @@
+.gallery-grid, .gallery-list {
+    display: none;
+}
+
+.show-grid .gallery-grid {
+    display: flex;
+}
+
+.show-list .gallery-list {
+    display: block;
+}
+
+.btn-view {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 5px;
+}
+
+
+.image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.image-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.image-caption {
+    margin-top: 10px;
+    color: #333;
+}
+
+.show-grid .hide-in-grid {
+    display: none;
+}
+.likes {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 16px; 
+    margin-bottom: 4px;
+}

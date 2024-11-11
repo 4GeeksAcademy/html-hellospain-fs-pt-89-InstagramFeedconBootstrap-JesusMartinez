@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="show-grid">
+    <nav class="navbar navbar-light bg-light p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <div>
+                <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
+                <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="text-center my-3">
+        <button class="btn-view btn btn-outline-primary" onclick="document.body.className='show-grid'">
+            <i class="fas fa-th"></i> Grid View
+        </button>
+        <button class="btn-view btn btn-outline-primary" onclick="document.body.className='show-list'">
+            <i class="fas fa-th-list"></i> List View
+        </button>
+    </div>
+
+ <div class="container gallery-grid">
+        <div class="row">
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">D&D</div>
+                    <img src="https://images.pexels.com/photos/7025165/pexels-photo-7025165.jpeg?auto=compress&cs=tinysrgb&w=400" class="img-fluid" alt="Photo 1">
+                </div>
+                <p class="image-caption hide-in-grid">Explora mundos de fantasía y misterio con cada lanzamiento de dados. Sumérgete en aventuras únicas donde cada número cuenta. El juego apenas comienza, ¿estás listo para el desafío?
+                </p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Cascada</div>
+                    <img src="https://images.unsplash.com/photo-1653642258945-c5f69c3efe92?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGQlMjZkfGVufDB8fDB8fHww" class="img-fluid" alt="Photo 2">
+                </div>
+                <p class="image-caption hide-in-grid">La fuerza de la naturaleza se despliega en esta majestuosa cascada. El agua cae libremente entre rocas y árboles, creando un espectáculo único. Un lugar perfecto para reconectar con la serenidad.
+                </p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Perro pelota</div>
+                    <img src="https://images.unsplash.com/photo-1709790533845-0ba75d4f013e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGJhbG9uZXN8ZW58MHx8MHx8fDA%3D" class="img-fluid" alt="Photo 3">
+                </div>
+                <p class="image-caption hide-in-grid">Un divertido momento acuático para este perro juguetón. Entre pelotas y chapoteos, disfruta del agua como nadie. Un amigo fiel que encuentra alegría en cada juego.
+                </p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Kilimanjaro</div>
+                    <img src="https://plus.unsplash.com/premium_photo-1697730001718-988e5a1c32d2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGtpbGltYW5qYXJvfGVufDB8fDB8fHww" class="img-fluid" alt="Photo 4">
+                </div>
+                <p class="image-caption hide-in-grid">Un refugio en el corazón del Kilimanjaro, rodeado de imponentes montañas. Los excursionistas encuentran aquí descanso y vistas inigualables. Un lugar 
+                </p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Montaña diferentes minerales</div>
+                    <img src="https://images.unsplash.com/photo-1482709746041-1adc5a8aef00?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fG1vbnRhJUMzJUIxYSUyMGNvbG9yZXN8ZW58MHx8MHx8fDA%3D" class="img-fluid" alt="Photo 5">
+                </div>
+                <p class="image-caption hide-in-grid">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Everest</div>
+                    <img src="https://images.unsplash.com/3/GoWildImages_MtEverest_NEP0555.jpg?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlcmVzdHxlbnwwfHwwfHx8MA%3D%3D" class="img-fluid" alt="Photo 6">
+                </div>
+                <p class="image-caption hide-in-grid">Majestuosas cumbres se elevan sobre valles profundos, cubiertas por un manto de nieve brillante. La naturaleza en su máxima expresión, imponente y serena a la vez. Un espectáculo que invita al asombro y la contemplación.</p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Desierto de Uyuni</div>
+                    <img src="https://images.pexels.com/photos/4856284/pexels-photo-4856284.jpeg?auto=compress&cs=tinysrgb&w=400" class="img-fluid" alt="Photo 7">
+                </div>
+                <p class="image-caption hide-in-grid">Las banderas de todo el mundo ondean en un paisaje deslumbrante y único. Un símbolo de unidad y diversidad en el vasto desierto de sal. Un espacio donde el cielo se encuentra con la tierra en una vista inolvidable.</p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Sistema solar</div>
+                    <img src="https://images.pexels.com/photos/7568783/pexels-photo-7568783.jpeg?auto=compress&cs=tinysrgb&w=400" class="img-fluid" alt="Photo 8">
+                </div>
+                <p class="image-caption hide-in-grid">Los planetas giran alrededor del sol en una danza cósmica eterna. La inmensidad del espacio ofrece un espectáculo de luces y sombras. Un recordatorio de lo pequeños que somos en el vasto universo.</p>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="image-container">
+                    <div class="image-header hide-in-grid">Parapente</div>
+                    <img src="https://images.pexels.com/photos/161173/rio-de-janeiro-olympics-2016-niteroi-brazil-161173.jpeg?auto=compress&cs=tinysrgb&w=400" class="img-fluid" alt="Photo 9">
+                </div>
+                <p class="image-caption hide-in-grid">Flotar en el aire sobre montañas y mar es una experiencia sin igual. La libertad de volar permite descubrir paisajes desde otra perspectiva. El cielo despejado invita a una aventura en lo alto.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container gallery-list">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">D&D</div>
+                    <img src="https://images.pexels.com/photos/7025165/pexels-photo-7025165.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid w-100" alt="Photo 1">
+                </div>
+                <p class="likes">400 Likes</p>
+                <p class="image-caption">Explora mundos de fantasía y misterio con cada lanzamiento de dados. Sumérgete en aventuras únicas donde cada número cuenta. El juego apenas comienza, ¿estás listo para el desafío?
+                </p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">Cascada</div>
+                    <img src="https://images.unsplash.com/photo-1653642258945-c5f69c3efe92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGQlMjZkfGVufDB8fDB8fHww" class="img-fluid w-100" alt="Photo 2">
+                </div>
+                <p class="likes">400 Likes</p>
+                <p class="image-caption">La fuerza de la naturaleza se despliega en esta majestuosa cascada. El agua cae libremente entre rocas y árboles, creando un espectáculo único. Un lugar perfecto para reconectar con la serenidad.
+                </p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">Perro pelota</div>
+                    <img src="https://images.unsplash.com/photo-1709790533845-0ba75d4f013e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGJhbG9uZXN8ZW58MHx8MHx8fDA%3D" class="img-fluid w-100" alt="Photo 3">
+                </div>
+                <p class="image-caption">Un divertido momento acuático para este perro juguetón. Entre pelotas y chapoteos, disfruta del agua como nadie. Un amigo fiel que encuentra alegría en cada juego.
+                </p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">kilimanjaro</div>
+                    <img src="https://plus.unsplash.com/premium_photo-1697730001718-988e5a1c32d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGtpbGltYW5qYXJvfGVufDB8fDB8fHww" class="img-fluid w-100" alt="Photo 4">
+                </div>
+                <p class="likes">400 Likes</p>
+                <p class="image-caption">Un refugio en el corazón del Kilimanjaro, rodeado de imponentes montañas. Los excursionistas encuentran aquí descanso y vistas inigualables. Un lugar 
+                </p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">Montaña diferentes minerales</div>
+                    <img src="https://images.unsplash.com/photo-1482709746041-1adc5a8aef00?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fG1vbnRhJUMzJUIxYSUyMGNvbG9yZXN8ZW58MHx8MHx8fDA%3D" class="img-fluid w-100" alt="Photo 5">
+                </div>
+                <p class="likes">400 Likes</p>
+                <p class="image-caption">Un paisaje esculpido por milenios de erosión, donde el río Colorado serpentea en el fondo. Colores vibrantes y formaciones únicas crean un espectáculo natural. Un destino para aventureros y amantes de la geología.
+                </p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">Everest</div>
+                    <img src="https://images.unsplash.com/3/GoWildImages_MtEverest_NEP0555.jpg?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlcmVzdHxlbnwwfHwwfHx8MA%3D%3D" class="img-fluid w-100" alt="Photo 6">
+                </div>
+                <p class="image-caption">Majestuosas cumbres se elevan sobre valles profundos, cubiertas por un manto de nieve brillante. La naturaleza en su máxima expresión, imponente y serena a la vez. Un espectáculo que invita al asombro y la contemplación.</p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">Desierto de Uyuni</div>
+                    <img src="https://images.pexels.com/photos/4856284/pexels-photo-4856284.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid w-100" alt="Photo 7">
+                </div>
+                <p class="likes">400 Likes</p>
+                <p class="image-caption">Las banderas de todo el mundo ondean en un paisaje deslumbrante y único. Un símbolo de unidad y diversidad en el vasto desierto de sal. Un espacio donde el cielo se encuentra con la tierra en una vista inolvidable.</p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">Sistema solar</div>
+                    <img src="https://images.pexels.com/photos/7568783/pexels-photo-7568783.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid w-100" alt="Photo 8">
+                </div>
+                <p class="likes">400 Likes</p>
+                <p class="image-caption">Los planetas giran alrededor del sol en una danza cósmica eterna. La inmensidad del espacio ofrece un espectáculo de luces y sombras. Un recordatorio de lo pequeños que somos en el vasto universo.</p>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="image-container">
+                    <div class="image-header">Parapente</div>
+                    <img src="https://images.pexels.com/photos/161173/rio-de-janeiro-olympics-2016-niteroi-brazil-161173.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid w-100" alt="Photo 9">
+                </div>
+                <p class="likes">400 Likes</p>
+                <p class="image-caption">Flotar en el aire sobre montañas y mar es una experiencia sin igual. La libertad de volar permite descubrir paisajes desde otra perspectiva. El cielo despejado invita a una aventura en lo alto.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newPostModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="postCaption" class="form-label">Caption:</label>
+                            <textarea class="form-control" id="postCaption" placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-light"><i class="fas fa-camera"></i></button>
+                            <button type="button" class="btn btn-light"><i class="fas fa-map-marker-alt"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
